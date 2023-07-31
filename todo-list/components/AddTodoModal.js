@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo, updateTodo } from "@/Redux/todoSlice";
+import { addTodo, updateTodo } from "@/redux/todoSlice";
 import { TextField, Box, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import ReusableButton from "./ReusableButton";

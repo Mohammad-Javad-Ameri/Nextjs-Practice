@@ -1,19 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// Function to get todos from local storage
-const getTodos = () => {
-  const allTodos = window.localStorage.getItem("todoList");
-  if (allTodos) {
-    return JSON.parse(allTodos);
-  }
-  localStorage.setItem("todolist", []);
-  return [];
-};
-
 // Initial state for the todo slice
 const initialTodoValue = {
   filterStatus: "all",
-  todoList: getTodos(),
+  todoList: [],
 };
 
 // Creating a slice for the todo
@@ -77,12 +67,20 @@ export const todoSlice = createSlice({
       // Updating the filter status in the state
       state.filterStatus = action.payload;
     },
+    initializeTodos: (state, action) => {
+      state.todoList = action.payload;
+    },
   },
 });
 
 // Exporting the actions from the slice
-export const { addTodo, updateTodo, deleteTodo, changeStatus } =
-  todoSlice.actions;
+export const {
+  addTodo,
+  updateTodo,
+  deleteTodo,
+  changeStatus,
+  initializeTodos,
+} = todoSlice.actions;
 
 // Exporting the reducer from the slice
 export default todoSlice.reducer;

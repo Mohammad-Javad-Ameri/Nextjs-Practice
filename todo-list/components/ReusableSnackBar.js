@@ -1,4 +1,4 @@
-import {Snackbar,Alert} from "@mui/material";
+import { Snackbar, Alert } from "@mui/material";
 
 // Creating a reusable Snackbar component
 function ReusableSnackBar({ open, handleClose, message, severity }) {

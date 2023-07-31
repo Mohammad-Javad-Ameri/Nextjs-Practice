@@ -7,11 +7,13 @@ import Buttons from "@/components/Buttons";
 import AppContent from "@/components/AppContent";
 
 export default function Home() {
+  // Using useSelector hook to get the current theme from the redux state
   const theme = useSelector((state) =>
     state.theme.theme === "light" ? lightTheme : darkTheme
   );
 
   return (
+    // Wrapping all components within the ThemeProvider to apply the current theme
     <ThemeProvider theme={theme}>
       <Header />
       <Buttons />

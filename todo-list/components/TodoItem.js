@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { deleteTodo, updateTodo } from "@/Redux/todoSlice";
+import { deleteTodo, updateTodo } from "@/redux/todoSlice";
 import { Box, IconButton, Typography, Checkbox } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
@@ -116,10 +116,10 @@ function TodoItem({ todo }) {
             gap: 1,
           }}
         >
-          <IconButton onClick={handleDelete}>
+          <IconButton onClick={handleDelete} aria-label="Delete">
             <DeleteIcon />
           </IconButton>
-          <IconButton onClick={handleUpdate}>
+          <IconButton onClick={handleUpdate} aria-label="Edit">
             <EditIcon />
           </IconButton>
         </Box>
