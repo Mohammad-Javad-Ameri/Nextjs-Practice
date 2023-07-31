@@ -1,7 +1,7 @@
 import { Stack } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import { changeStatus } from "@/Redux/todoSlice";
+import { changeStatus } from "@/redux/todoSlice";
 import AddTodoModal from "./AddTodoModal";
 import ReusableButton from "./ReusableButton";
 import ReusableSelect from "./ReusableSelect";

@@ -4,11 +4,11 @@ import IconButton from "@mui/material/IconButton";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleTheme } from "@/Redux/themeSlice";
+import { toggleTheme } from "@/redux/themeSlice";
 
 function Header() {
   // Using useSelector hook to get the theme from the redux state
-  const theme = useSelector((state) => state.theme.theme);
+  const theme = useSelector((state) => state.theme?.theme ?? "light");
 
   // Using useDispatch hook to dispatch actions
   const dispatch = useDispatch();
